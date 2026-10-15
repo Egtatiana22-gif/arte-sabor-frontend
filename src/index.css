@@ -1,0 +1,79 @@
+/* =========================================================
+   ESTILOS GLOBALES
+   Normalización y configuración base de Arte y Sabor.
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fffaf4;
+    color: #36251e;
+}
+
+/* Los controles heredan la tipografía del sitio. */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Evita el resaltado azul al tocar elementos en móviles. */
+button,
+a,
+input,
+select,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Estilo de selección de texto acorde con la identidad visual. */
+::selection {
+    background-color: #e8d2b4;
+    color: #36251e;
+}
+
+/* Las imágenes no deben desbordar sus contenedores. */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Los enlaces heredan el color del diseño cuando no se especifica otro. */
+a {
+    color: inherit;
+}
+
+/* Los botones muestran que son interactivos. */
+button {
+    cursor: pointer;
+}
+
+/* Respeta la preferencia del usuario por menos animaciones. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
